@@ -1,0 +1,54 @@
+@if $use-tables == true {
+
+	table {
+		font-family: $base-heading-font;
+		background-color: $light-color;
+		@include radius($border-radius);
+		overflow: hidden;
+		border-bottom: $border-size/2 solid darken($light-color, 13);
+		box-shadow: 0 0 3px rgba(0,0,0,.08);
+		margin-bottom: $base-spacing-unit/2;
+	}
+
+	tr {
+		border-bottom: $border-size/2 solid darken($light-color, 9);
+	}
+
+	tbody tr {
+		&:nth-child(odd) {
+			background-color: darken($light-color, 2);
+		}
+	}
+
+	td, th {
+		padding: $base-spacing-unit/3.2 + 2 $base-spacing-unit/2.8 $base-spacing-unit/3.2 - 2;
+		letter-spacing: -.5px;
+	}
+
+	th {
+		padding: $base-spacing-unit/2.8 + 2 $base-spacing-unit/2.8 $base-spacing-unit/2.8 - 2;
+		font-size: $font-size*.9;
+		line-height: $font-size;
+		font-weight: 500;
+		color: darken($light-color, 25);
+		border-right: $border-size/2 solid darken($light-color, 6);
+	}
+
+	td {
+		font-size: $font-size*.9;
+		line-height: $font-size;
+		font-weight: 500;
+		color: $dark-color;
+		border-right: $border-size/2 solid darken($light-color, 9);
+
+		* {
+			font-size: $font-size*.9;
+			line-height: $font-size;
+			font-weight: 500;
+		}
+
+		&:last-child {
+			border-right: 0px;
+		}
+	}
+}

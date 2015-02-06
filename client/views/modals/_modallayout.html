@@ -1,0 +1,11 @@
+<template name="modallayout">
+  <div id="{{ id }}" class="modal floating modal--dark">
+    <div class="floating__item modal--content">
+      <div class="modal--close close icon"><span class="fa fa-fw fa-times"></span></div>
+      <h2>{{ modalTitle }}</h2>
+
+        {{> UI.contentBlock}}
+        
+    </div>
+  </div>
+</template>

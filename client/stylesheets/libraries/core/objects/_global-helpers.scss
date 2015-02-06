@@ -1,0 +1,145 @@
+.hidden {
+    display: none !important;
+}
+
+.text--larger {
+    font-size: $font-size*1.2;
+    line-height: $line-height*1.2;
+
+    * {
+        font-size: $font-size*1.2;
+        line-height: $line-height*1.2;
+    }
+
+    @include media-query(handheld) {
+        font-size: $font-size;
+        line-height: $line-height;
+
+        * {
+            font-size: $font-size;
+            line-height: $line-height;
+        }
+    }
+}
+
+.rounded {
+    @include radius(99999px);
+}
+
+@include namespace(full-width) {
+    width: 100% !important;
+}
+
+a.full-width {
+    display: inline-block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.constrained {
+    max-width: $copy-max-width;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.font--heading {
+    font-family: $base-heading-font;
+
+    * {
+        font-family: $base-heading-font;
+    }
+
+    b {
+        font-weight: 500;
+    }
+}
+
+.font--copy {
+    font-family: $base-copy-font;
+
+    * {
+        font-family: $base-copy-font;
+    }
+}
+
+.color--primary {
+    color: $primary-color !important;
+}
+
+.color--secondary {
+    color: $secondary-color !important;
+}
+
+.color--tertiary {
+    color: $tertiary-color !important;
+}
+
+.color--medium {
+    color: $medium-color !important;
+}
+
+.color--dark {
+    color: $dark-color !important;
+}
+
+.color--light {
+    color: $light-color !important;
+}
+
+.color--positive {
+    color: $positive-color !important;
+}
+
+.color--negative {
+    color: $negative-color !important;
+}
+
+a.color--negative {
+    &:hover {
+        color: darken($negative-color, 15) !important;
+    }
+}
+
+.background--primary {
+    background-color: $primary-color !important;
+}
+
+.background--secondary {
+    background-color: $secondary-color !important;
+}
+
+.background--tertiary {
+    background-color: $tertiary-color !important;
+}
+
+.background--medium {
+    background-color: $medium-color !important;
+}
+
+.background--dark {
+    background-color: $dark-color !important;
+}
+
+.background--light {
+    background-color: $light-color !important;
+}
+
+.background--positive {
+    background-color: $positive-color !important;
+}
+
+.background--negative {
+    background-color: $negative-color !important;
+}

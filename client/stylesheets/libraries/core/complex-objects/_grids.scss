@@ -1,0 +1,27 @@
+@if $use-grids == true {
+
+	.grid, .grid__item {
+		position: relative;
+	}
+
+	.grid {
+		@include media-query(handheld) {
+			margin-left: -$base-spacing-unit/3;
+		}
+	}
+
+	.grid__item {
+		@include media-query(handheld) {
+			padding-left: $base-spacing-unit/3;
+		}
+	}
+
+	.grid--condensed {
+	  	margin-left: -$base-spacing-unit/3;
+
+	  	.grid__item {
+	    	padding-left: $base-spacing-unit/3;
+	    	margin-bottom: $base-spacing-unit/3;
+	  	}
+	}
+}

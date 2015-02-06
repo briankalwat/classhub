@@ -1,0 +1,32 @@
+@if $use-lists == true {
+
+  ul, ol {
+    display: inline-block;
+  	font-family: $base-copy-font;
+    font-size: $font-size;
+    line-height: $line-height;
+    list-style: none;
+  	margin: 0 0 $base-spacing-unit/2 0;
+
+    li {
+      letter-spacing: -.5px;
+
+		  .section--primary &, 
+	    .section--secondary &, 
+	    .section--tertiary &, 
+	    .section--medium &,
+	    .section--dark & {
+	    	color: $light-color;
+	    }
+    }
+  }
+
+  .list--inline {
+    display: inline-block;
+
+    li {
+      display: inline-block;
+      margin: 0px;
+    }
+  }
+}

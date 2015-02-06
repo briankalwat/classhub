@@ -1,0 +1,186 @@
+@if $use-buttons == true {
+
+	.btn {
+		display: inline-block;
+		font-family: $base-heading-font;
+		font-size: $font-size;
+		font-weight: 600;
+		text-decoration: none;
+		border: $button-size/6 solid lighten($cta-color, 3);
+		padding: $base-spacing-unit/6 + 1 $base-spacing-unit/2 $base-spacing-unit/6 - 1;
+  		margin-right: $base-spacing-unit/3;
+  		letter-spacing: -.5px;
+		@include radius($border-radius);
+
+		&:hover {
+			background: lighten($cta-color, 3);
+			color: $light-color;
+		}
+
+		&.btn--secondary {
+			border-color: $secondary-color;
+			color: $secondary-color;
+
+			&:hover {
+				background-color: $secondary-color;
+				color: $light-color;
+			}
+		}
+
+		&.btn--tertiary {
+			border-color: $tertiary-color;
+			color: $tertiary-color;
+
+			&:hover {
+				background-color: $tertiary-color;
+				color: $light-color;
+			}
+		}
+
+		@include media-query(palm) {
+			width: 100%;
+			text-align: center;
+			padding: $base-spacing-unit/6 + 1 $base-spacing-unit/3.5 $base-spacing-unit/6 - 1;
+		}
+
+		.section--primary &,
+        .section--secondary &,
+        .section--tertiary & {
+        	color: $light-color;
+			border-color: $light-color;
+
+			&:hover {
+				color: $cta-color;
+				background: $light-color;
+			}
+        }
+
+        .section--medium & {
+        	color: $light-color;
+        	border-color: $light-color;
+
+        	&:hover {
+        		color: $cta-color;
+        		background: $light-color;
+        	}
+        }
+
+        .section--dark & {
+
+        	&:hover {
+        		color: $light-color;
+        		background: lighten($cta-color, 3);
+        	}
+        }
+
+        .fa {
+        	position: relative;
+        	top: 1px;
+        	font-size: $font-size*1.1;
+        }
+	}
+
+	.btn--filled {
+		@extend .btn;
+		background: $cta-color;
+		border-color: $cta-color;
+		color: $light-color;
+		@include vendor(transition, all $global-duration $global-function);
+
+		&:hover {
+			background: darken($cta-color, 10);
+			border-color: darken($cta-color, 10);
+		}
+
+		&.btn--secondary {
+			background-color: $secondary-color;
+			color: $light-color;
+
+			&:hover {
+				background-color: darken($secondary-color, 10);
+				border-color: darken($secondary-color, 10);
+			}
+		}
+
+		&.btn--tertiary {
+			background-color: $tertiary-color;
+			color: $light-color;
+
+			&:hover {
+				background-color: darken($tertiary-color, 10);
+				border-color: darken($tertiary-color, 10);
+			}
+		}
+
+		.section--primary &,
+		.section--secondary &,
+		.section--tertiary &,
+		.section--medium &,
+		.section--dark & {
+			background: $light-color;
+			border-color: $light-color;
+
+			&:hover {
+				background: $light-color;
+				color: $cta-color;
+			}
+		}
+
+		.section--primary & {
+			color: $primary-color;
+		}
+
+		.section--secondary & {
+			color: $secondary-color;
+		}
+
+		.section--tertiary & {
+			color: $tertiary-color;
+		}
+
+		.section--medium & {
+			color: $medium-color;
+		}
+
+		.section--dark & {
+			color: $dark-color;
+		}
+	}
+
+	.btn--icon {
+		padding-left: $base-spacing-unit/3;
+
+		.fa {
+			font-size: $font-size*.95;
+			position: relative;
+		    left: -5px;
+		    top: 1px;
+		}
+	}
+
+	.btn--pill {
+		@extend .btn;
+		@include radius($button-size*3);
+	}
+
+	.btn--negative {
+		background-color: $negative-color;
+		border-color: $negative-color;
+
+		&:hover {
+			background-color: darken($negative-color, 10);
+			border-color: darken($negative-color, 10);
+		}
+	}
+
+	.btn--facebook {
+		background-color: $facebook-color;
+		border-color: $facebook-color;
+
+		&:hover {
+			background-color: darken($facebook-color, 10);
+			border-color: darken($facebook-color, 10);
+		}
+	}
+
+}
