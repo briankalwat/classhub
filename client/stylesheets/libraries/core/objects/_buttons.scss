@@ -2,14 +2,13 @@
 
 	.btn {
 		display: inline-block;
-		font-family: $base-heading-font;
-		font-size: $font-size;
-		font-weight: 600;
+		font-family: $base-copy-font;
+		font-size: $font-size*.9;
+		font-weight: 700;
 		text-decoration: none;
 		border: $button-size/6 solid lighten($cta-color, 3);
-		padding: $base-spacing-unit/6 + 1 $base-spacing-unit/2 $base-spacing-unit/6 - 1;
+		padding: $base-spacing-unit/5 - 1 $base-spacing-unit/2 $base-spacing-unit/5 + 1;
   		margin-right: $base-spacing-unit/3;
-  		letter-spacing: -.5px;
 		@include radius($border-radius);
 
 		&:hover {
@@ -115,8 +114,7 @@
 		.section--primary &,
 		.section--secondary &,
 		.section--tertiary &,
-		.section--medium &,
-		.section--dark & {
+		.section--medium & {
 			background: $light-color;
 			border-color: $light-color;
 
@@ -143,7 +141,12 @@
 		}
 
 		.section--dark & {
-			color: $dark-color;
+			color: $light-color;
+
+			&:hover {
+				background-color: darken($primary-color, 10);
+				border-color: darken($primary-color, 10);
+			}
 		}
 	}
 

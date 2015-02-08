@@ -9,16 +9,25 @@
   	margin: 0 0 $base-spacing-unit/2 0;
 
     li {
-      letter-spacing: -.5px;
+      margin-bottom: $base-spacing-unit/8;
 
 		  .section--primary &, 
 	    .section--secondary &, 
 	    .section--tertiary &, 
-	    .section--medium &,
 	    .section--dark & {
 	    	color: $light-color;
 	    }
+
+      .section--medium &,
+      .section--light {
+        color: $dark-color;
+      }
     }
+  }
+
+  .list--bulleted {
+    list-style: outside;
+    margin-left: $base-spacing-unit/2.5;
   }
 
   .list--inline {

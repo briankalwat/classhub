@@ -16,19 +16,18 @@
     .section--primary &, 
     .section--secondary &, 
     .section--tertiary &, 
-    .section--medium &,
     .section--dark & {
       color: $light-color;
     }
 
-    .section--light & {
+    .section--light &,
+    .section--medium & {
       color: $dark-color;
     }
   }
 
   b, strong {
-    font-weight: 600;
-    letter-spacing: -.5px;
+    font-weight: 800;
   }
 
   .text--constrained {

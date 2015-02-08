@@ -2,7 +2,7 @@ html {
     font-size: 100%;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-    background-color: $light-color;
+    background-color: $dark-color;
 }
 
 
@@ -57,7 +57,7 @@ body {
 hr {
     border: 0px solid transparent;
     border-top: $border-size*2 solid darken($light-color, 7);
-    @include radius(100px);
+    margin: $base-spacing-unit 0;
 
     &.short {
         margin: $base-spacing-unit auto;

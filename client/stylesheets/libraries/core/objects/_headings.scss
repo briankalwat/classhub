@@ -2,61 +2,68 @@
 
 	@include headings(1,6) {
   	font-family: $base-heading-font;
-  	color: $dark-color;
   	margin-bottom: $base-spacing-unit/2;
+    color: $tertiary-color;
 
 		.section--primary &, 
 		.section--secondary &, 
 		.section--tertiary &, 
-		.section--medium &,
 		.section--dark & {
 			color: $light-color;
 		}
 
+    .section--medium &,
 		.section--light & {
 			color: $dark-color;
 		}
 	}
 
-  	h1 {
-  		font-size: $h1;
-  		line-height: $h1-height;
-      letter-spacing: -2px;
-      margin-bottom: $base-spacing-unit*.75;
-  	}
+	h1 {
+		font-size: $h1;
+		line-height: $h1-height;
+    margin-bottom: $base-spacing-unit*.75;
+    color: $primary-color;
 
-    h2, h3, h4, h5 {
-      letter-spacing: -.05px;
+    .section--primary & {
+      color: $tertiary-color;
     }
 
-  	h2 {
-  		font-size: $h2;
-  		line-height: $h2-height;
-  	}
+    .section--dark & {
+      color: $primary-color;
+    }
+	}
 
-  	h3 {
-  		font-size: $h3;
-  		line-height: $h3-height;
-  		color: $medium-color;
- 
-  		.section--medium & {
-  			color: darken($medium-color, 30);
-  		}
-  	}
+	h2 {
+		font-size: $h2;
+		line-height: $h2-height;
 
-  	h4 {
-  		font-size: $h4;
-  		line-height: $h4-height;
-  	}
+    .section--medium & {
+      color: $primary-color;
+    }
+	}
 
-  	h5 {
-  		font-size: $h5;
-  		line-height: $h5-height;
-  	}
+	h3 {
+		font-size: $h3;
+		line-height: $h3-height;
+		color: darken($medium-color, 30);
 
-  	h6 {
-  		font-size: $h6;
-  		line-height: $h6-height;
-  	}
+		.section--medium & {
+			color: darken($medium-color, 40);
+		}
+	}
 
+	h4 {
+		font-size: $h4;
+		line-height: $h4-height;
+	}
+
+	h5 {
+		font-size: $h5;
+		line-height: $h5-height;
+	}
+
+	h6 {
+		font-size: $h6;
+		line-height: $h6-height;
+	}
 }
